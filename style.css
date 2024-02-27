@@ -1,0 +1,246 @@
+:root {
+  --light: #f0e398;
+  --main: #f4d113;
+  --card: #07b4ec;
+  --dark: #074192;
+  --info: #7783b5;
+  --accent: #e798ad;
+  --correct: #7ec380;
+}
+* {
+  font-family: "Montserrat";
+  margin: 0px;
+}
+body {
+  background-image: url("./Images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-family: "Montserrat";
+  font-weight: bold;
+  
+}
+h3 {
+  font-family: Courier New;
+  color: var(--dark);
+}
+
+nav {
+  background-color: var(--main);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+nav ul li {
+  padding: 10px;
+}
+nav ul li:hover a:hover {
+  background-color: var(--light);
+  border-radius: 5px;
+  color: var(--dark);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+footer{
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--dark);
+    margin-top: auto;
+    z-index: 3;
+} 
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+ul {
+  list-style-type: none;
+}
+footer ul li{
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+footer ul li:hover a:hover{
+    color: var(--accent);
+}
+.floatcontainer{
+    display: flex;
+}
+.floatchild{
+    flex: 1;
+}
+.icon {
+  font-size: 15px;
+  color: var(--dark);
+  padding: 10px;
+}
+.logo {
+  font-size: 30px;
+  border-radius: 100%;
+  color: var(--card);
+  padding: 10px;
+}
+.titlecard {
+  border-radius: 15px 50px;
+  background-color: white;
+  color: var(--dark);
+  position: fixed;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card {
+  border-radius: 15px 15px 50px 50px;
+  background-color: white;
+  color: var(--dark);
+  position: absolute;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cards{
+    position: relative;
+    padding:40px;
+}
+.cardhead {
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: larger;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cardbody {
+  background-color: white;
+  background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(255,255,255,1) 40%);
+  font-family: Courier New;
+  font-size: large;
+  padding: 10px;
+}
+.dark {
+  background-color: var(--dark);
+  color: white;
+}
+.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+.main {
+  background-color: var(--main);
+  color: var(--dark);
+}
+.blue {
+  background-color: var(--card);
+  color: white;
+}
+.accent {
+  background-color: var(--accent);
+  color: white;
+}
+.info {
+  background-color: var(--info);
+  color: white;
+}
+.correct {
+  background-color: var(--correct);
+  color: white;
+}
+.foot {
+  background-color: white;
+}
+
+.pose1 {
+  right: 15%;
+}
+
+.pose2 {
+  left: 5%;
+  top: 30%;
+  padding: 15px;
+}
+.pose3 {
+  right: 5%;
+}
+.pose4 {
+  right: 25%;
+}
+.pose5{
+    left:5%;
+    margin-top: 40%;
+}
+.center{
+    text-align: center;
+    width: 80%;
+}
+.cold {
+  background-image: url("./Images/cold.jpg");
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 300px;
+  background-size: cover;
+}
+.warm {
+  background-image: url("./Images/warm.jpg");
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 300px;
+  background-size: cover;
+}
+.tree {
+  background-image: url("./Images/tree.jpg");
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 300px;
+  background-size: cover;
+}
+.plane{
+background-image: url("./Images/plane.jpg");
+  background-repeat: no-repeat;
+  height: 600px;
+  z-index: -1;
+  background-size: cover;
+}
+.card:hover {
+  z-index: 1;
+}
+.profile{
+    background-color:white;
+    border-radius: 15px;
+    position: fixed;
+    top:15%;
+    left:5%;
+    padding: 20px;
+    height: 400px;
+    width: 300px;
+}
+.profileIcon{
+    color:var(--info);
+    font-size: 80px;
+}
+.flights {
+    border-radius: 15px;
+    position:absolute;
+    color: var(--dark);
+    right:5%;
+    top:15%;
+    width:50%;
+}
+.booking{
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    color: var(--dark);
+    top:20%;
+    height: 110%;
+
+}
+.spacer{
+    margin-left: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
