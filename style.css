@@ -69,8 +69,8 @@ footer ul li:hover a:hover {
 }
 .center {
   border-color: var(--dark);
-  border-radius: 20px;
-  border: double 1px var(--dark);
+  border-radius: 30px;
+  border: solid 2px var(--dark);
   color: var(--light);
   display: flex;
   gap: 20px;
@@ -142,6 +142,23 @@ footer ul li:hover a:hover {
 .hero {
   padding: 10px;
 }
+.places {
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+}
+.carousel-container {
+  width: 100%; /* Set width of the carousel */
+  height: 300px; /* Set height of the carousel */
+  overflow: hidden; /* Hide anything outside the carousel */
+  position: relative; /* Needed for absolute positioning of items */
+}
+.carousel-wrapper {
+  display: flex; /* Arrange items horizontally */
+  width: 100%; /* Make the wrapper span the entire container width */
+  animation: slide 10s infinite; /* Apply the slide animation */
+}
+
 .dark {
   background-color: var(--dark);
   color: white;
@@ -179,11 +196,11 @@ footer ul li:hover a:hover {
   background-color: white;
 }
 .card-image {
-  width: 180px;
+  width: 220px;
   height: 220px;
   border-radius: 40px;
 }
-.more{
+.more {
   border: solid 10px white;
   background-color: white;
   border-radius: 35px 0px 0px 0px;
@@ -251,4 +268,21 @@ footer ul li:hover a:hover {
 }
 .mg-10 {
   margin-top: 115px;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start at the first image */
+  }
+  25% {
+    transform: translateX(-20%); /* Move to the second image */
+  }
+  50% {
+    transform: translateX(-50%); /* Move to the second image */
+  }
+  75% {
+    transform: translateX(-70%); /* Move to the second image */
+  }
+  100% {
+    transform: translateX(0); /* Loop back to the first image */
+  }
 }
