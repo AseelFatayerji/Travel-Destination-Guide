@@ -1,8 +1,8 @@
 :root {
-  --light: #f0e398;
+  --light: #d6ffd6;
   --main: #f4d113;
-  --card: #07b4ec;
-  --dark: #074192;
+  --card: #8ff171;
+  --dark: #000000;
   --info: #7783b5;
   --accent: #e798ad;
   --correct: #7ec380;
@@ -12,17 +12,13 @@
   margin: 0px;
 }
 body {
-  background-image: url("./Images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 150vh;
+  background-color: var(--light);
   display: flex;
   flex-direction: column;
 }
 h2 {
   font-family: "Montserrat";
   font-weight: bold;
-  
 }
 h3 {
   font-family: Courier New;
@@ -30,61 +26,103 @@ h3 {
 }
 
 nav {
-  background-color: var(--main);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-nav ul {
-  list-style-type: none;
+  background-color: var(--light);  
   display: flex;
-  gap: 10px;
-}
-nav ul li {
+  font-size: 15px;
   padding: 10px;
+  justify-content: space-between;
 }
-nav ul li:hover a:hover {
-  background-color: var(--light);
-  border-radius: 5px;
+
+footer {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 15px;
   color: var(--dark);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: auto;
+  z-index: 3;
 }
-footer{
-    font-family: "Montserrat";
-    font-weight: bold;
-    font-size: 15px;
-    color: var(--dark);
-    margin-top: auto;
-    z-index: 3;
-} 
 a {
-    text-decoration: none;
-    color: var(--dark);
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
 }
 ul {
   list-style-type: none;
 }
-footer ul li{
-    font-family: "Montserrat";
-    font-weight: bold;
+footer ul li {
+  font-family: "Montserrat";
+  font-weight: bold;
 }
-footer ul li:hover a:hover{
-    color: var(--accent);
+footer ul li:hover a:hover {
+  color: var(--accent);
 }
-.floatcontainer{
-    display: flex;
+.floatcontainer {
+  display: flex;
 }
-.floatchild{
-    flex: 1;
+.floatchild {
+  flex: 1;
 }
 .icon {
   font-size: 15px;
   color: var(--dark);
   padding: 10px;
 }
-.logo {
-  font-size: 30px;
-  border-radius: 100%;
-  color: var(--card);
+.center {
+  border-color: var(--dark);
+  border-radius: 20px;
+  border: double 1px var(--dark);
+  color: var(--light); 
+  display: flex;
+  gap: 20px;
+  justify-self: center;
+  padding: 10px 10px;
+  text-align: center;
+  width: min-content;
+  max-width: min-content; 
+  height: fit-content;
+}
+.right {
+  font-size: 25px;
+  text-align: center;
   padding: 10px;
+  margin-top: 15px;
+  width: fit-content;
+}
+.left {
+  width: fit-content;
+}
+.logo{
+  height: 100px;
+  width: 100px;
+}
+.pill {
+  align-content: center;
+  background-color: var(--card);
+  border-radius: 20px;
+  color: var(--dark);
+  cursor: pointer;
+  margin: 4px 2px;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+}
+
+.pill:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+.selected {
+  align-content: center;
+  background-color: var(--dark);
+  border-radius: 25px;
+  color: var(--light);
+  cursor: pointer;
+  margin: 4px 2px;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;  
 }
 .titlecard {
   border-radius: 15px 50px;
@@ -102,9 +140,9 @@ footer ul li:hover a:hover{
   padding: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.cards{
-    position: relative;
-    padding:40px;
+.cards {
+  position: relative;
+  padding: 40px;
 }
 .cardhead {
   text-align: center;
@@ -117,7 +155,11 @@ footer ul li:hover a:hover{
 }
 .cardbody {
   background-color: white;
-  background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(255,255,255,1) 40%);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 0) 0%,
+    rgba(255, 255, 255, 1) 40%
+  );
   font-family: Courier New;
   font-size: large;
   padding: 10px;
@@ -153,30 +195,6 @@ footer ul li:hover a:hover{
 .foot {
   background-color: white;
 }
-
-.pose1 {
-  right: 15%;
-}
-
-.pose2 {
-  left: 5%;
-  top: 30%;
-  padding: 15px;
-}
-.pose3 {
-  right: 5%;
-}
-.pose4 {
-  right: 25%;
-}
-.pose5{
-    left:5%;
-    margin-top: 40%;
-}
-.center{
-    text-align: center;
-    width: 80%;
-}
 .cold {
   background-image: url("./Images/cold.jpg");
   background-repeat: no-repeat;
@@ -198,8 +216,8 @@ footer ul li:hover a:hover{
   width: 300px;
   background-size: cover;
 }
-.plane{
-background-image: url("./Images/plane.jpg");
+.plane {
+  background-image: url("./Images/plane.jpg");
   background-repeat: no-repeat;
   height: 600px;
   z-index: -1;
@@ -208,48 +226,4 @@ background-image: url("./Images/plane.jpg");
 .card:hover {
   z-index: 1;
 }
-.profile{
-    background-color:white;
-    border-radius: 15px;
-    position: fixed;
-    top:15%;
-    left:5%;
-    padding: 20px;
-    height: 400px;
-    width: 300px;
-}
-.profileIcon{
-    color:var(--info);
-    font-size: 80px;
-}
-.flights {
-    border-radius: 15px;
-    position:absolute;
-    color: var(--dark);
-    right:5%;
-    top:15%;
-    width:50%;
-}
-.booking{
-    background-color: white;
-    border-radius: 15px;
-    position: absolute;
-    color: var(--dark);
-    top:20%;
-    height: 110%;
 
-}
-.reviews{
-  background-color: white;
-    border-radius: 15px;
-    color: var(--dark);
-    width:30%;
-}
-.spacer{
-    margin-left: 10px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.spacertop{
-  margin-top: 50px;
-}
