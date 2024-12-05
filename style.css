@@ -1,10 +1,10 @@
 :root {
   --light: #d6ffd6;
   --main: #f4d113;
-  --card: #8ff171;
-  --dark: #00130a;
-  --info: #7783b5;
-  --accent: #e798ad;
+  --card: #c8ed4f;
+  --dark: #100e11;
+  --info: #c5baf3;
+  --accent: #f75c30;
   --correct: #7ec380;
 }
 * {
@@ -143,6 +143,13 @@ footer ul li:hover a:hover {
   padding: 10px;
 }
 .places {
+  background-color: var(--info);
+  border-radius: 20px;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+}
+.about {
   margin-top: 30px;
   padding: 10px;
   text-align: center;
@@ -190,10 +197,9 @@ footer ul li:hover a:hover {
 .foot {
   background-color: white;
 }
+
 .card {
   border-radius: 40px 0px 0px 0px;
-  border: 30px solid white;
-  background-color: white;
 }
 .card-image {
   width: 220px;
@@ -201,8 +207,6 @@ footer ul li:hover a:hover {
   border-radius: 40px;
 }
 .more {
-  border: solid 10px white;
-  background-color: white;
   border-radius: 35px 0px 0px 0px;
   top: auto;
   color: var(--dark);
@@ -215,6 +219,29 @@ footer ul li:hover a:hover {
 }
 .more-icon:hover {
   cursor: pointer;
+}
+.white-card {
+  border: 30px solid white;
+  background-color: white;
+}
+.white-more {
+  border: solid 10px white;
+  background-color: white;
+}
+.info-card {
+  border: 30px solid var(--info);
+  background-color: var(--info);
+}
+.info-more {
+  border: solid 10px var(--info);
+  background-color: var(--info);
+}
+.labels {
+  border-radius: 20px;
+  font-size: 40px;
+  padding: 20px 60px;
+  margin-top: 20px;
+  text-align: center;
 }
 .cold {
   background-image: url("./Images/cold.jpg");
@@ -250,11 +277,20 @@ footer ul li:hover a:hover {
   width: 100px;
   color: transparent;
 }
-.right-corner {
+.right-corner-white {
   background-image: url(/Images/corner.png);
   width: fit-content;
   transform: rotate(180deg);
   color: transparent;
+}
+.right-corner {
+  background-image: url(/Images/corner-purple.png);
+  width: fit-content;
+  transform: rotate(180deg);
+  color: transparent;
+}
+.space-even {
+  justify-content: space-evenly;
 }
 .end {
   justify-self: flex-end;
