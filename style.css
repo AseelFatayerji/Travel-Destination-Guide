@@ -197,29 +197,29 @@ footer ul li:hover a:hover {
 .foot {
   background-color: white;
 }
-.flights{
+.flights {
   width: fit-content;
 }
 .card {
   border-radius: 40px 0px 0px 0px;
   text-align: center;
 }
-.card_title{
+.card_title {
   border-radius: 20px 20px 0px 0px;
   text-align: center;
   padding: 5px;
 }
-.card_body{
+.card_body {
   color: white;
   padding: 10px;
   width: fit-content;
 }
 .card-image {
-  width: 320px;
+  width: 330px;
   height: 220px;
   border-radius: 40px;
 }
-.profile{
+.profile {
   padding: 10px;
   width: fit-content;
 }
@@ -260,6 +260,21 @@ footer ul li:hover a:hover {
   margin-top: 20px;
   text-align: center;
 }
+.text{
+  padding: 5px;
+  width: 400px;
+}
+.text-body{
+  text-align: center;
+}
+.images {
+  border-radius: 20px;
+  width: 400px;
+  height: 300px;
+}
+.booking {
+  padding: 10px;
+}
 .cold {
   background-image: url("./Images/cold.jpg");
 }
@@ -269,6 +284,11 @@ footer ul li:hover a:hover {
   height: 400px;
   width: 300px;
   background-size: cover;
+}
+.sea {
+  background-image: url("./Images/sea.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .tree {
   background-image: url("./Images/tree.jpg");
