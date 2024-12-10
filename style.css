@@ -1,5 +1,5 @@
 :root {
-  --light: #d6ffd6;
+  --light: #e9fde9;
   --main: #f4d113;
   --card: #c8ed4f;
   --dark: #100e11;
@@ -197,14 +197,30 @@ footer ul li:hover a:hover {
 .foot {
   background-color: white;
 }
-
+.flights{
+  width: fit-content;
+}
 .card {
   border-radius: 40px 0px 0px 0px;
+  text-align: center;
+}
+.card_title{
+  border-radius: 20px 20px 0px 0px;
+  text-align: center;
+}
+.card_body{
+  color: white;
+  padding: 10px;
+  width: fit-content;
 }
 .card-image {
-  width: 220px;
+  width: 320px;
   height: 220px;
   border-radius: 40px;
+}
+.profile{
+  padding: 10px;
+  width: fit-content;
 }
 .more {
   border-radius: 35px 0px 0px 0px;
@@ -265,9 +281,11 @@ footer ul li:hover a:hover {
 .plane {
   background-image: url("./Images/plane.jpg");
   background-repeat: no-repeat;
-  height: 600px;
-  z-index: -1;
   background-size: cover;
+  border-radius: 20px;
+  height: 400px;
+  width: 400px;
+  z-index: -1;
 }
 .card:hover {
   z-index: 1;

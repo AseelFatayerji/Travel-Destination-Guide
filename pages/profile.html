@@ -11,15 +11,21 @@
   <body>
     <header>
       <nav>
-        <ul>
-          <li><a href="../index.html" class="fa-solid fa-home logo"> </a></li>
-          <li><a href="pages/profile.html" class="fa-solid fa-user logo"> </a></li>
-          <li><a href="pages/reviews.html" class="fa-solid fa-book logo"></a></li>
-        </ul>
+        <div class="left">
+          <img src="/Images/logo.png" class="logo" />
+        </div>
+        <div class="center">
+          <a href="../index.html"><div class="selected">Home </div></a>
+          <a href="../index.html#place"><div class="pill">Places </div></a>
+          <a href="../index.html#about"><div class="pill">About </div></a>
+        </div>
+        <div class="right">
+          <a href="pages/profile.html" class="fa-solid fa-user"> </a>
+        </div>
       </nav>
     </header>
-    <div class="floatcontainer">
-      <div class="profile floatchild">
+    <div class="floatcontainer space-even">
+      <div class="profile">
         <h2 class="fa-solid fa-user profileIcon"></h2>
         <div>
           <h3>Name: John Johnson</h3>
@@ -27,9 +33,9 @@
           <h3>Number of flight miles: 20</h3>
         </div>
       </div>
-      <div class="flights plane floatchild">
-        <div class="cardhead info"><h2>Flights</h2></div>
-        <div class="cardbody">
+      <div class="flights plane">
+        <div class="card_title info"><h2>Flights</h2></div>
+        <div class="card_body">
           <h2>
             Flight 457 United Arab Emirates
             <i class="fa-solid fa-circle-check"></i>
