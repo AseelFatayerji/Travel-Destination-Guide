@@ -292,7 +292,11 @@ footer ul li:hover a:hover {
 .tree {
   background-image: url("./Images/tree.jpg");
   background-repeat: no-repeat;
+  border-radius: 40px;
   background-size: contain;
+  height: 530px;
+  justify-self: center;
+  width: 90%;
 }
 .plane {
   background-image: url("./Images/plane.jpg");
