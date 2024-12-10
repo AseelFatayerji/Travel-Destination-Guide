@@ -281,9 +281,8 @@ footer ul li:hover a:hover {
 .warm {
   background-image: url("./Images/warm.jpg");
   background-repeat: no-repeat;
-  height: 400px;
-  width: 300px;
-  background-size: cover;
+  background-size: contain;
+  ;
 }
 .sea {
   background-image: url("./Images/sea.jpg");
@@ -293,11 +292,7 @@ footer ul li:hover a:hover {
 .tree {
   background-image: url("./Images/tree.jpg");
   background-repeat: no-repeat;
-  height: 530px;
-  justify-self: center;
-  width: 90%;
-  background-size: cover;
-  border-radius: 40px;
+  background-size: contain;
 }
 .plane {
   background-image: url("./Images/plane.jpg");
@@ -312,18 +307,18 @@ footer ul li:hover a:hover {
   z-index: 1;
 }
 .left-corner {
-  background-image: url("Images/corner.png");
+  background-image: url("./Images/corner.png");
   width: 100px;
   color: transparent;
 }
 .right-corner-white {
-  background-image: url("Images/corner.png");
+  background-image: url("./Images/corner.png");
   width: fit-content;
   transform: rotate(180deg);
   color: transparent;
 }
 .right-corner {
-  background-image: url("Images/corner-purple.png");
+  background-image: url("./Images/corner-purple.png");
   width: fit-content;
   transform: rotate(180deg);
   color: transparent;
