@@ -207,6 +207,7 @@ footer ul li:hover a:hover {
 .card_title{
   border-radius: 20px 20px 0px 0px;
   text-align: center;
+  padding: 5px;
 }
 .card_body{
   color: white;
