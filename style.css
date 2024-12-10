@@ -296,7 +296,7 @@ footer ul li:hover a:hover {
   background-size: cover;
   height: 530px;
   justify-self: center;
-  width: 100%;
+  width: 95%;
 }
 .plane {
   background-image: url("./Images/plane.jpg");
