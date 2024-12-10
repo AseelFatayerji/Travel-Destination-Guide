@@ -312,18 +312,18 @@ footer ul li:hover a:hover {
   z-index: 1;
 }
 .left-corner {
-  background-image: url("./Images/corner.png");
+  background-image: url("Images/corner.png");
   width: 100px;
   color: transparent;
 }
 .right-corner-white {
-  background-image: url("./Images/corner.png");
+  background-image: url("Images/corner.png");
   width: fit-content;
   transform: rotate(180deg);
   color: transparent;
 }
 .right-corner {
-  background-image: url("./Images/corner-purple.png");
+  background-image: url("Images/corner-purple.png");
   width: fit-content;
   transform: rotate(180deg);
   color: transparent;
