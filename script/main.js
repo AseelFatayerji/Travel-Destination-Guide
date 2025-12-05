@@ -41,6 +41,7 @@ ScrollReveal().reveal(".choose-img img", {
 ScrollReveal().reveal(".about-img", {
   ...scrollRevealOPtion,
   origin: "left",
+  delay: 500,
 });
 
 ScrollReveal().reveal(".choose-content .section-subheader", {
