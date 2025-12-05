@@ -28,7 +28,6 @@ body {
 
 nav {
   position: fixed;
-  isolation: isolate;
   width: 100%;
   z-index: 9;
 }
@@ -140,14 +139,42 @@ ul {
   background-color: var(--dark);
 }
 
-@media (width >768) {
+@media (min-width: 768px) {
   nav {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     position: static;
     padding: 0.5rem 0.75rem;
-    max-width: var(--max-width);
-    margin-inline: auto;
+  }
+
+  .nav-header {
+    flex: 1;
+    padding: 0;
+    background-color: transparent;
+  }
+  .nav-menu-btn {
+    display: none;
+  }
+
+  .nav-link {
+    background-color: transparent;
+    flex-direction: row;
+    transform: none !important;
+    padding: 0;
+    position: static;
+    width: fit-content;
+    z-index: 1;
+  }
+
+  .nav-link a {
+    cursor: pointer;
+    color: var(--text-dark);
+  }
+  .nav-link a:hover {
+    color: var(--main);
+  }
+  .nav-btn {
+    display: block;
   }
 }
