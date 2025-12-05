@@ -17,9 +17,14 @@ const scrollRevealOPtion = {
 };
 
 const swiper = new Swiper(".swiper", {
-  slidesPerView: 3,
   spaceBetween: 0,
   loop: true,
+  breakpoints: {
+    0: { slidesPerView: 1.2 }, 
+    480: { slidesPerView: 1.5 }, 
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 }, 
+  },
 });
 
 ScrollReveal().reveal(".header-img img", {

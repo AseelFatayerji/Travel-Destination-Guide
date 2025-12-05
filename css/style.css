@@ -386,8 +386,11 @@ ul {
 }
 
 .swiper {
-  padding-block: 4rem;
+  padding-block: 5rem;
   width: 100%;
+}
+.swiper-wrapper{
+  padding: 5rem;
 }
 
 .swiper-slide {
