@@ -177,6 +177,8 @@ ul {
     color: var(--main);
   }
   .nav-btn {
-    display: block;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 }
