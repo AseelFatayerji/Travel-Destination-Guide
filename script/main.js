@@ -20,10 +20,10 @@ const swiper = new Swiper(".swiper", {
   spaceBetween: 0,
   loop: true,
   breakpoints: {
-    0: { slidesPerView: 1.2 }, 
-    480: { slidesPerView: 1.5 }, 
+    0: { slidesPerView: 1.2 },
+    480: { slidesPerView: 1.5 },
     640: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 }, 
+    1024: { slidesPerView: 3 },
   },
 });
 
@@ -68,3 +68,42 @@ ScrollReveal().reveal(".choose-list li", {
   delay: 1500,
   interval: 500,
 });
+
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    let value = Math.floor(progress * (end - start) + start);
+    if (progress === 1 && end > 14) {
+      obj.innerHTML = value + "+";
+    } else {
+      obj.innerHTML = value;
+    }
+
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+const counters = document.querySelectorAll(".counter");
+
+const countersObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const end = parseInt(el.dataset.end);
+        animateValue(el, 0, end, 800);
+        observer.unobserve(el);
+      }
+    });
+  },
+  {
+    threshold: 0.5, 
+  }
+);
+
+counters.forEach((counter) => countersObserver.observe(counter));
