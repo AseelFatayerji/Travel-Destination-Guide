@@ -1,5 +1,8 @@
 const menuBtn = document.getElementById("hamburger-toggle");
 const navLinks = document.getElementById("nav-links");
+const next = document.getElementById("next");
+const prev = document.getElementById("prev");
+const cards = Array.from(document.querySelectorAll(".client-card"));
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
@@ -8,6 +11,27 @@ menuBtn.addEventListener("click", (e) => {
 navLinks.addEventListener("click", (e) => {
   navLinks.classList.remove("open");
   hamburger.checked = false;
+});
+
+next.addEventListener("click", (e) => {
+  for (let index = 0; index < cards.length; index++) {
+    if (cards[index].classList.contains("active")) {
+      const nextIndex = (index + 1) % cards.length;
+      cards[index].classList.remove("active");
+      cards[nextIndex].classList.add("active");
+      break;
+    }
+  }
+});
+prev.addEventListener("click", (e) => {
+  for (let index = 0; index < cards.length; index++) {
+    if (cards[index].classList.contains("active")) {
+      const prevIndex = (index ? index : cards.length) - 1;
+      cards[index].classList.remove("active");
+      cards[prevIndex].classList.add("active");
+      break;
+    }
+  }
 });
 
 const scrollRevealOPtion = {
@@ -92,11 +116,10 @@ ScrollReveal().reveal(".explore-content .explore-btn", {
   delay: 2000,
 });
 ScrollReveal().reveal(".explore-grid div", {
-  duration:1000,
+  duration: 1000,
   delay: 2500,
   interval: 500,
 });
-
 
 function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
@@ -131,7 +154,7 @@ const countersObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5, 
+    threshold: 0.5,
   }
 );
 
