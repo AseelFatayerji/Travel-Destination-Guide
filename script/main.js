@@ -69,6 +69,35 @@ ScrollReveal().reveal(".choose-list li", {
   interval: 500,
 });
 
+ScrollReveal().reveal(".explore-img img", {
+  ...scrollRevealOPtion,
+  origin: "right",
+  delay: 500,
+});
+
+ScrollReveal().reveal(".explore-content .section-subheader", {
+  ...scrollRevealOPtion,
+  delay: 500,
+});
+ScrollReveal().reveal(".explore-content .section-header", {
+  ...scrollRevealOPtion,
+  delay: 1000,
+});
+ScrollReveal().reveal(".explore-content .section-description", {
+  ...scrollRevealOPtion,
+  delay: 1500,
+});
+ScrollReveal().reveal(".explore-content .explore-btn", {
+  ...scrollRevealOPtion,
+  delay: 2000,
+});
+ScrollReveal().reveal(".explore-grid div", {
+  duration:1000,
+  delay: 2500,
+  interval: 500,
+});
+
+
 function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
   const step = (timestamp) => {
