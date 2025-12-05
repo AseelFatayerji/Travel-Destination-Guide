@@ -254,7 +254,7 @@ ul {
   position: absolute;
   transform: rotate(90deg);
   top: -5rem;
-  left: -8rem;
+  left: -3rem;
   z-index: 1;
 }
 .choose-list {
@@ -292,6 +292,7 @@ ul {
   align-items: center;
   display: flex;
   gap: 1rem;
+  padding: 2rem;
 }
 
 .popular-container {
@@ -302,14 +303,95 @@ ul {
 
 .popular-bg {
   aspect-ratio: 1;
-  height: 32rem;
+  height: 12rem;
   object-fit: contain;
+  overflow-x: hidden;
   position: absolute;
-  left:90%;
+  left: 70%;
   top: -10px;
   transform: translate(-65%, -50%) rotate(-20deg) scaleY(-1);
   width: unset;
   z-index: 3;
+}
+
+.popular-card {
+  border-radius: 3rem;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-inline: 1rem;
+}
+
+.popular-card img {
+  aspect-ratio: 1;
+}
+
+.popular-content {
+  isolation: isolate;
+  padding-block: 3rem 2rem;
+  position: relative;
+  padding-inline: 2rem;
+}
+.popular-content h4 {
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.popular-content p {
+  color: var(--text-light);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.popular-content p span {
+  color: var(--main);
+}
+
+.popular-card-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular-card-footer div {
+  align-items: center;
+  color: var(--text-light);
+  display: flex;
+  gap: 10px;
+}
+
+.popular-card-footer span {
+  font-size: 1.2rem;
+}
+
+.popular-rating {
+  align-items: center;
+  background-color: var(--white);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  color: var(--text-light);
+  display: flex;
+  gap: 10px;
+  left: 2rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.popular-rating span {
+  color: goldenrod;
+  font-size: 1.2rem;
+}
+
+.swiper {
+  padding-block: 4rem;
+  width: 100%;
+}
+
+.swiper-slide {
+  min-width: 375px;
 }
 
 .btn {
@@ -417,5 +499,11 @@ ul {
   .choose-container {
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .choose-container .about-img {
+    left: -8rem;
+  }
+  .popular-bg {
+    height: 32rem;
   }
 }

@@ -16,6 +16,12 @@ const scrollRevealOPtion = {
   origin: "bottom",
 };
 
+const swiper = new Swiper(".swiper", {
+  slidesPerView: 3,
+  spaceBetween: 0,
+  loop: true,
+});
+
 ScrollReveal().reveal(".header-img img", {
   ...scrollRevealOPtion,
   origin: "right",
