@@ -33,3 +33,21 @@ ScrollReveal().reveal(".header-content form", {
   ...scrollRevealOPtion,
   delay: 2500,
 });
+
+ScrollReveal().reveal(".choose-img img", {
+  ...scrollRevealOPtion,
+  origin: "left",
+});
+ScrollReveal().reveal(".choose-content .section-subheader", {
+  ...scrollRevealOPtion,
+  delay: 500,
+});
+ScrollReveal().reveal(".choose-content .section-header", {
+  ...scrollRevealOPtion,
+  delay: 1000,
+});
+ScrollReveal().reveal(".choose-list li", {
+  ...scrollRevealOPtion,
+  delay: 1500,
+  interval: 500,
+});
