@@ -38,6 +38,11 @@ ScrollReveal().reveal(".choose-img img", {
   ...scrollRevealOPtion,
   origin: "left",
 });
+ScrollReveal().reveal(".about-img", {
+  ...scrollRevealOPtion,
+  origin: "left",
+});
+
 ScrollReveal().reveal(".choose-content .section-subheader", {
   ...scrollRevealOPtion,
   delay: 500,

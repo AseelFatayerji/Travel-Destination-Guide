@@ -235,10 +235,12 @@ ul {
   width: unset;
 }
 
+
 .choose-container {
   display: grid;
   gap: 4rem;
   overflow: hidden;
+  position: relative;
 }
 
 .choose-container img {
@@ -248,7 +250,14 @@ ul {
   margin-inline: auto;
   transform: rotate(90deg);
 }
-
+.choose-container .about-img {
+  box-shadow: none;
+  position: absolute;
+  transform: rotate(90deg);
+  top: -5rem;
+  left: -8rem;  
+  z-index: 1;
+}
 .choose-list {
   display: grid;
   gap: 3rem;
@@ -390,6 +399,6 @@ ul {
 
   .choose-container {
     align-items: center;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
