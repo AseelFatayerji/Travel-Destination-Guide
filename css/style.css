@@ -209,16 +209,10 @@ ul {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-.header-img img:hover {
-  z-index: 9;
-  transform: scale(1.1); 
 }
 
 .header-img img:nth-child(1) {
   grid-area: 1/1/4/3;
-  margin-left: 3rem;
 }
 
 .header-img img:nth-child(2) {
@@ -227,8 +221,6 @@ ul {
 
 .header-img img:nth-child(3) {
   grid-area: 2/3/6/6;
-  margin-left: -3rem;
-  margin-top: 1rem;
 }
 
 .header-img img:nth-child(4) {
@@ -237,7 +229,7 @@ ul {
   height: 20rem;
   object-fit: contain;
   position: absolute;
-  right: 6rem;
+  right: 4rem;
   top: -2rem;
   transform: rotate(20deg);
   width: unset;
@@ -310,7 +302,7 @@ ul {
     padding-bottom: 10rem;
   }
 
-  .header-content :is(h1, .section-description){
+  .header-content :is(h1, .section-description) {
     text-align: left;
   }
   .header-content form {
@@ -321,5 +313,27 @@ ul {
     margin: 0;
     width: max-content;
     z-index: 3;
+  }
+
+  .header-img img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .header-img img:hover {
+    z-index: 9;
+    transform: scale(1.1);
+  }
+
+  .header-img img:nth-child(1) {
+    margin-left: 3rem;
+  }
+
+  .header-img img:nth-child(3) {
+    margin-left: -3rem;
+    margin-top: 1rem;
+  }
+
+  .header-img img:nth-child(4) {
+    right: 6rem;
   }
 }
