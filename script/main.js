@@ -121,6 +121,20 @@ ScrollReveal().reveal(".explore-grid div", {
   interval: 500,
 });
 
+ScrollReveal().reveal(".contact-container .section-header", {
+  ...scrollRevealOPtion,
+});
+
+ScrollReveal().reveal(".contact-container .section-description", {
+  ...scrollRevealOPtion,
+  delay: 1000,
+});
+
+ScrollReveal().reveal(".contact-container form", {
+  ...scrollRevealOPtion,
+  delay: 1500,
+});
+
 function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
   const step = (timestamp) => {
