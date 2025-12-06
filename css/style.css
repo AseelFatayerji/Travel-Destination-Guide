@@ -709,6 +709,9 @@ footer {
     position: relative;
     padding-bottom: 10rem;
   }
+   .header-content h1 {
+    line-height: 5rem;
+  }
 
   .header-content :is(h1, .section-description) {
     text-align: left;
