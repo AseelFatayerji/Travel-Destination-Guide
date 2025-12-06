@@ -1,6 +1,6 @@
 # Travel Agency Website
 
-This website is a simple travel agency showcase built using **HTML** and **CSS**. It highlights various travel packages, destinations, and services offered by the fictional agency. The design is responsive, ensuring an optimal experience across both mobile and desktop devices.
+This website is a simple travel agency showcase built using **HTML**, **JavaScript** and **CSS**. It highlights various travel packages, destinations, and services offered by the fictional agency. The design is responsive, ensuring an optimal experience across both mobile and desktop devices.
 
 ## Features
 - **Explore Destinations**: The website displays a variety of travel destinations with beautiful images and descriptions to inspire users.
@@ -10,7 +10,7 @@ This website is a simple travel agency showcase built using **HTML** and **CSS**
 ## Technologies Used
 - **HTML**: Structure of the web page.
 - **CSS**: Styling and layout of the application.
-
+- **JavaScript**:Animating the websites
 ## Demo
 You can view the live demo of the expense tracker at:  
 [GitHub Pages Link](https://aseelfatayerji.github.io/Travel-Destination-Guide//)
