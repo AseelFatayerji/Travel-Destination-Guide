@@ -1,0 +1,362 @@
+:root {
+  --light: #e9fde9;
+  --main: #f4d113;
+  --card: #c8ed4f;
+  --dark: #100e11;
+  --info: #c5baf3;
+  --accent: #f75c30;
+  --correct: #7ec380;
+}
+* {
+  font-family: "Montserrat";
+  margin: 0px;
+}
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+h3 {
+  font-family: Courier New;
+  color: var(--dark);
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  font-size: 15px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+footer {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--dark);
+  margin-top: auto;
+  z-index: 3;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+footer ul li {
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+footer ul li:hover a:hover {
+  color: var(--accent);
+}
+.floatcontainer {
+  display: flex;
+}
+.floatchild {
+  flex: 1;
+}
+.icon {
+  font-size: 15px;
+  color: var(--dark);
+  padding: 10px;
+}
+.center {
+  border-color: var(--dark);
+  border-radius: 30px;
+  border: solid 2px var(--dark);
+  color: var(--light);
+  display: flex;
+  gap: 20px;
+  justify-self: center;
+  padding: 10px 10px;
+  text-align: center;
+  width: min-content;
+  max-width: min-content;
+  height: fit-content;
+}
+.right {
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 15px;
+  width: fit-content;
+}
+.left {
+  width: fit-content;
+}
+.logo {
+  height: 100px;
+  width: 100px;
+}
+.pill {
+  align-content: center;
+  background-color: var(--card);
+  border-radius: 20px;
+  color: var(--dark);
+  cursor: pointer;
+  margin: 4px 2px;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+}
+
+.pill:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+.selected {
+  align-content: center;
+  background-color: var(--dark);
+  border-radius: 25px;
+  color: var(--light);
+  cursor: pointer;
+  margin: 4px 2px;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+}
+.title {
+  background-color: white;
+  border-radius: 0px 0px 40px 0px;
+  display: flex;
+  font-size: 50px;
+  width: fit-content;
+  padding: 10px;
+}
+.title2 {
+  background-color: white;
+  border-radius: 0px 0px 40px 0px;
+  font-size: 50px;
+  width: fit-content;
+  padding: 10px;
+}
+.hero {
+  padding: 10px;
+}
+.places {
+  background-color: var(--info);
+  border-radius: 20px;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+}
+.about {
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+}
+.carousel-container {
+  width: 100%; /* Set width of the carousel */
+  height: 300px; /* Set height of the carousel */
+  overflow: hidden; /* Hide anything outside the carousel */
+  position: relative; /* Needed for absolute positioning of items */
+}
+.carousel-wrapper {
+  display: flex; /* Arrange items horizontally */
+  width: 100%; /* Make the wrapper span the entire container width */
+  animation: slide 10s infinite; /* Apply the slide animation */
+}
+
+.dark {
+  background-color: var(--dark);
+  color: white;
+}
+.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+.main {
+  background-color: var(--main);
+  color: var(--dark);
+}
+.blue {
+  background-color: var(--card);
+  color: white;
+}
+.accent {
+  background-color: var(--accent);
+  color: white;
+}
+.info {
+  background-color: var(--info);
+  color: white;
+}
+.correct {
+  background-color: var(--correct);
+  color: white;
+}
+.foot {
+  background-color: white;
+}
+.flights {
+  width: fit-content;
+}
+.card {
+  border-radius: 40px 0px 0px 0px;
+  text-align: center;
+}
+.card_title {
+  border-radius: 20px 20px 0px 0px;
+  text-align: center;
+  padding: 5px;
+}
+.card_body {
+  color: white;
+  padding: 10px;
+  width: fit-content;
+}
+.card-image {
+  width: 330px;
+  height: 220px;
+  border-radius: 40px;
+}
+.profile {
+  padding: 10px;
+  width: fit-content;
+}
+.more {
+  border-radius: 35px 0px 0px 0px;
+  top: auto;
+  color: var(--dark);
+  font-size: 40px;
+  text-align: center;
+  width: fit-content;
+}
+.more-icon {
+  transform: rotate(45deg);
+}
+.more-icon:hover {
+  cursor: pointer;
+}
+.white-card {
+  border: 30px solid white;
+  background-color: white;
+}
+.white-more {
+  border: solid 10px white;
+  background-color: white;
+}
+.info-card {
+  border: 30px solid var(--info);
+  background-color: var(--info);
+}
+.info-more {
+  border: solid 10px var(--info);
+  background-color: var(--info);
+}
+.labels {
+  border-radius: 20px;
+  font-size: 40px;
+  padding: 20px 60px;
+  margin-top: 20px;
+  text-align: center;
+}
+.text{
+  padding: 5px;
+  width: 400px;
+}
+.text-body{
+  text-align: center;
+}
+.images {
+  border-radius: 20px;
+  width: 400px;
+  height: 300px;
+}
+.booking {
+  padding: 10px;
+}
+.cold {
+  background-image: url("./Images/cold.jpg");
+}
+.warm {
+  background-image: url("./Images/warm.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  ;
+}
+.sea {
+  background-image: url("./Images/sea.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.tree {
+  background-image: url("./Images/tree.jpg");
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  background-size: cover;
+  height: 530px;
+  justify-self: center;
+  width: 95%;
+}
+.plane {
+  background-image: url("./Images/plane.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  height: 400px;
+  width: 400px;
+  z-index: -1;
+}
+.card:hover {
+  z-index: 1;
+}
+.left-corner {
+  background-image: url("./Images/corner.png");
+  width: 100px;
+  color: transparent;
+}
+.right-corner-white {
+  background-image: url("./Images/corner.png");
+  width: fit-content;
+  transform: rotate(180deg);
+  color: transparent;
+}
+.right-corner {
+  background-image: url("./Images/corner-purple.png");
+  width: fit-content;
+  transform: rotate(180deg);
+  color: transparent;
+}
+.space-even {
+  justify-content: space-evenly;
+}
+.end {
+  justify-self: flex-end;
+  height: fit-content;
+}
+.down {
+  align-self: flex-end;
+}
+.mg-2 {
+  margin-top: 20px;
+}
+.mg-10 {
+  margin-top: 115px;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start at the first image */
+  }
+  25% {
+    transform: translateX(-20%); /* Move to the second image */
+  }
+  50% {
+    transform: translateX(-50%); /* Move to the second image */
+  }
+  75% {
+    transform: translateX(-70%); /* Move to the second image */
+  }
+  100% {
+    transform: translateX(0); /* Loop back to the first image */
+  }
+}
