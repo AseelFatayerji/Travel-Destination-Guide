@@ -12,6 +12,7 @@
   --text-light: #1e293b;
   --max-width: 1200px;
 }
+
 * {
   margin: 0px;
   padding: 0px;
@@ -516,6 +517,34 @@ ul {
   background-color: var(--main);
   color: var(--white);
 }
+
+.contact-container :is(.section-header, .section-description) {
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-container form{
+  align-items: center;
+  color: var(--white);
+  border-radius: 10px;
+  background-color: rgba(104, 216, 24, 0.5);
+  display: flex;
+  font-size: 1em;
+  height: 45px;
+  justify-content: space-between;
+  max-width: 500px;
+  margin-inline: auto;
+}
+.contact-container form div{
+  padding: 10px;
+  text-align: center;
+}
+.icon-2{
+  font-size: 1.5rem;
+}
+
 .btn {
   background-color: var(--main);
   border-radius: 5px;
@@ -656,7 +685,7 @@ ul {
   .explore-content {
     grid-area: 1/1/1;
   }
-  .client-btns{
+  .client-btns {
     margin-top: 0;
     position: absolute;
     left: 10rem;
