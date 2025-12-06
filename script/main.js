@@ -3,6 +3,7 @@ const navLinks = document.getElementById("nav-links");
 const next = document.getElementById("next");
 const prev = document.getElementById("prev");
 const cards = Array.from(document.querySelectorAll(".client-card"));
+const counters = document.querySelectorAll(".counter");
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
@@ -33,6 +34,22 @@ prev.addEventListener("click", (e) => {
     }
   }
 });
+
+function startCounter(counter) {
+  const end = +counter.getAttribute("data-end");
+  let current = 0;
+  const increment = end / 100;
+  const update = () => {
+    current += increment;
+    if (current < end) {
+      counter.textContent = Math.floor(current);
+      requestAnimationFrame(update);
+    } else {
+      counter.textContent = end > 14 ? `${end}+` : end;
+    }
+  };
+  update();
+}
 
 const scrollRevealOPtion = {
   distance: "50px",
@@ -115,10 +132,22 @@ ScrollReveal().reveal(".explore-content .explore-btn", {
   ...scrollRevealOPtion,
   delay: 2000,
 });
+
 ScrollReveal().reveal(".explore-grid div", {
-  duration: 1000,
+  distance: "50px",
+  duration: 1200,
   delay: 2500,
-  interval: 500,
+  easing: "ease-out",
+  origin: "bottom",
+
+  afterReveal: () => {
+    counters.forEach((counter) => {
+      if (!counter.classList.contains("started")) {
+        counter.classList.add("started");
+        startCounter(counter);
+      }
+    });
+  },
 });
 
 ScrollReveal().reveal(".contact-container .section-header", {
@@ -153,23 +182,3 @@ function animateValue(obj, start, end, duration) {
   };
   window.requestAnimationFrame(step);
 }
-
-const counters = document.querySelectorAll(".counter");
-
-const countersObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const end = parseInt(el.dataset.end);
-        animateValue(el, 0, end, 800);
-        observer.unobserve(el);
-      }
-    });
-  },
-  {
-    threshold: 0.5,
-  }
-);
-
-counters.forEach((counter) => countersObserver.observe(counter));
