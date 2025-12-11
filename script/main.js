@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const scrollRevealOption = {
   distance: "50px",
-  duration: 1000,
+  duration: 500,
   easing: "ease-out",
   reset: false,
   viewFactor: 0.2,
@@ -88,7 +88,7 @@ const scrollRevealOption = {
 ScrollReveal().reveal(".header-img img", {
   ...scrollRevealOption,
   origin: "right",
-  interval: 200,
+  interval: 500,
 });
 ScrollReveal().reveal(".header-content h1", {
   ...scrollRevealOption,
@@ -96,11 +96,11 @@ ScrollReveal().reveal(".header-content h1", {
 });
 ScrollReveal().reveal(".header-content .section-description", {
   ...scrollRevealOption,
-  delay: 2000,
+  delay: 1000,
 });
 ScrollReveal().reveal(".header-content form", {
   ...scrollRevealOption,
-  delay: 2500,
+  delay: 1500,
 });
 ScrollReveal().reveal(".choose-img img", {
   ...scrollRevealOption,
@@ -109,20 +109,20 @@ ScrollReveal().reveal(".choose-img img", {
 ScrollReveal().reveal(".about-img", {
   ...scrollRevealOption,
   origin: "left",
-  delay: 1000,
+  delay: 500,
 });
 ScrollReveal().reveal(".choose-content .section-subheader", {
   ...scrollRevealOption,
-  delay: 1000,
+  delay: 500,
 });
 ScrollReveal().reveal(".choose-content .section-header", {
   ...scrollRevealOption,
-  delay: 1000,
+  delay: 500,
 });
 ScrollReveal().reveal(".choose-list li", {
   ...scrollRevealOption,
   delay: 1500,
-  interval: 1000,
+  interval: 500,
 });
 ScrollReveal().reveal(".explore-img img", {
   ...scrollRevealOption,
