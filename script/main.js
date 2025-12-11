@@ -1,3 +1,35 @@
+/*Author: Aseel Fatayerji*/
+
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", (e) => {
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".wrapper",
+        start: "top top",
+        end: "+=150%",
+        pin: true,
+        scrub: true
+      },
+    })
+    .to(".img-container img", {
+      scale: 2,
+      z: 350,
+      transformOrigin: "center center",
+      ease: "power1.out",
+    })
+    .to(
+      ".section.intro",
+      {
+        scale: 1.1,
+        transformOrigin: "center center",
+        ease: "power1.out",
+        duration: 1.5,
+      },
+      "<"
+    );
+});
+
 const menuBtn = document.getElementById("hamburger-toggle");
 const navLinks = document.getElementById("nav-links");
 const next = document.getElementById("next");

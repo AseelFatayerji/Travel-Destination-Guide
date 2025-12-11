@@ -1,3 +1,5 @@
+/*Author: Aseel Fatayerji*/
+
 @import url("https://fonts.googleapis.com/css2?family=Gugi&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Modern+Antiqua&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap");
 
 :root {
@@ -99,7 +101,60 @@ footer {
 }
 
 .logo-img {
+  margin-left: 1rem;
   height: 70px;
+  width: unset;
+}
+
+.wrapper .zoom {
+  position: relative;
+  width: 100vw;
+  z-index: 1;
+}
+
+.zoom {
+  overflow-x: hidden;
+}
+
+.zoom .section {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+.section.intro {
+  background-image: url("../assets/intro.jpg");
+}
+.zoom .section-title {
+  height: fit-content;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--white);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.img-container {
+  height: 101vh;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  perspective: 500px;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.img-container img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
 }
 
 .section-container {
@@ -638,6 +693,10 @@ footer {
   background-color: var(--dark);
 }
 
+.center {
+  text-align: center;
+}
+
 @keyframes fadeEffect {
   from {
     opacity: 0;
@@ -665,11 +724,11 @@ footer {
     justify-content: space-between;
     gap: 1rem;
     position: static;
-    padding: 0.5rem 0.75rem;
+    padding-top: 0.75rem;
   }
 
   .nav-header {
-    background-color: transparent;
+    background: var(--white);
     flex: 1;
     padding: 0;
   }
@@ -678,7 +737,7 @@ footer {
   }
 
   .nav-link {
-    background-color: transparent;
+    background: var(--white);
     flex-direction: row;
     transform: none !important;
     padding: 0;
@@ -696,6 +755,7 @@ footer {
   }
   .nav-btn {
     display: flex;
+    margin-right: 1rem;
   }
 
   .header-container {
@@ -709,7 +769,7 @@ footer {
     position: relative;
     padding-bottom: 10rem;
   }
-   .header-content h1 {
+  .header-content h1 {
     line-height: 5rem;
   }
 
