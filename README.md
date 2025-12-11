@@ -13,7 +13,7 @@ This website is a simple travel agency showcase built using **HTML**, **JavaScri
 - **JavaScript**:Animating the websites
 ## Demo
 You can view the live demo of the expense tracker at:  
-[GitHub Pages Link](https://aseelfatayerji.github.io/Travel-Destination-Guide//)
+[GitHub Pages Link](https://aseelfatayerji.github.io/Travel-Destination-Guide/)
 
 ## User Stories
 - **As a user**, I want to explore different travel destinations and packages, so I can decide where to go on my next vacation.
