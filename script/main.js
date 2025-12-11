@@ -1,45 +1,5 @@
 /*Author: Aseel Fatayerji*/
 
-if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-window.scrollTo(0, 0);
-
-window.addEventListener("load", () => {
-  setTimeout(() => window.scrollTo(0, 0), 50);
-
-  if (window.innerWidth >= 1024) {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".wrapper",
-        start: "top top",
-        end: "+=120%",
-        pin: true,
-        scrub: true,
-        invalidateOnRefresh: true,
-      },
-    });
-
-    tl.to(".img-container .lens", {
-      scale: 2,
-      z: 350,
-      transformOrigin: "center center",
-      ease: "power1.out",
-    }).to(
-      ".section.intro",
-      {
-        transformOrigin: "center center",
-        ease: "power1.out",
-        duration: 1.5,
-      },
-      "<"
-    );
-
-    ScrollTrigger.refresh();
-  }
-});
-
-
 const menuBtn = document.getElementById("hamburger-toggle");
 const navLinks = document.getElementById("nav-links");
 const next = document.getElementById("next");
