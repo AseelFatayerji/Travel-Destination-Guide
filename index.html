@@ -2,36 +2,33 @@
 <html>
   <head>
     <title>Travel Guide</title>
-    <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-        as="style"
-        onload="this.rel='stylesheet'"
-      />
-      <noscript><link rel="stylesheet" href="..." /></noscript>
-      <link
-        rel="preload"
-        href="css/style.css"
-        as="style"
-        onload="this.rel='stylesheet'"
-      />
-      <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
-      <link
-        rel="preload"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="..." /></noscript>
+    <link
+      rel="preload"
+      href="css/style.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-        as="style"
-        onload="this.rel='stylesheet'"
-      />
-      <noscript
-        ><link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-      /></noscript>
-    </head>
-
+    /></noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
@@ -42,7 +39,6 @@
             Let's Make Some Memories
           </section>
         </section>
-
         <nav>
           <div class="nav-header">
             <div>
@@ -323,9 +319,6 @@
             </div>
           </div>
         </section>
-
-        <!-- Continue for About, Explore, Client, Footer sections -->
-
         <section class="section section-container client-container">
           <img src="assets/bg-3.png" alt="bg" class="client-bg" />
           <p class="section-subheader">Here's What Our Clients Thought</p>
@@ -376,8 +369,38 @@
               </p>
             </div>
           </div>
+          <div class="client-btns">
+            <button class="btn" id="prev">
+              <i class="fa-solid fa-arrow-left"></i></button
+            ><button class="btn" id="next">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
         </section>
-
+        <section class="section-container contact-container" id="Contact">
+          <h2 class="section-header">
+            Subscribe to get the Latest News <span>About Us</span>
+          </h2>
+          <p class="section-description">
+            Stay up to date with our latest travel deals, destination highlights
+            and exclusive offers. Subscribe now and never miss out!
+          </p>
+          <form action="/">
+            <div>
+              <i class="fa-solid fa-inbox icon-2"></i>
+              <input
+                type="text"
+                name="text"
+                class="input"
+                placeholder="info@gmail.com"
+              />
+            </div>
+            <button class="Subscribe-btn">
+              <i class="fa-solid fa-arrow-right-long arrow"></i>
+              Subscribe
+            </button>
+          </form>
+        </section>
         <footer>
           <div class="footer-container">
             <div class="footer-col">
@@ -385,7 +408,7 @@
                 <div class="footer-logo">
                   <a href="#" class="href"
                     ><img
-                      src="https://ik.imagekit.io/sas2seqly/assets/logo.png?tr=f-webp,fo-auto,w-70,q=70"
+                      src="https://ik.imagekit.io/sas2seqly/assets/logo.png"
                       class="logo-img"
                   /></a>
                 </div>
@@ -395,39 +418,95 @@
                   make travel planning effortless
                 </p>
               </div>
+              <ul class="footer-socials">
+                <li>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Services</h4>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
             </div>
             <div class="footer-col">
               <h4>Instagram</h4>
               <div class="footer-col-flex">
                 <img
-                  src="https://ik.imagekit.io/sas2seqly/assets/instagram-1.jpg?tr=f-webp,fo-auto,w-80,q=60"
+                  src="https://ik.imagekit.io/sas2seqly/assets/instagram-1.jpg"
                   alt="instagram"
                 />
                 <img
-                  src="https://ik.imagekit.io/sas2seqly/assets/instagram-2.jpg?tr=f-webp,fo-auto,w-80,q=60"
+                  src="https://ik.imagekit.io/sas2seqly/assets/instagram-2.jpg"
                   alt="instagram"
                 />
                 <img
-                  src="https://ik.imagekit.io/sas2seqly/assets/instagram-3.jpg?tr=f-webp,fo-auto,w-80,q=60"
+                  src="https://ik.imagekit.io/sas2seqly/assets/instagram-3.jpg"
                   alt="instagram"
                 />
                 <img
-                  src="https://ik.imagekit.io/sas2seqly/assets/instagram-4.jpg?tr=f-webp,fo-auto,w-80,q=60"
+                  src="https://ik.imagekit.io/sas2seqly/assets/instagram-4.jpg"
+                  alt="instagram"
+                />
+                <img
+                  src="https://ik.imagekit.io/sas2seqly/assets/instagram-5.jpg"
+                  alt="instagram"
+                />
+                <img
+                  src="https://ik.imagekit.io/sas2seqly/assets/instagram-6.jpg"
                   alt="instagram"
                 />
               </div>
             </div>
+            <div class="footer-col">
+              <h4>Contact</h4>
+              <ul class="footer-links">
+                <li>
+                  <a href="#"
+                    ><span><i class="fa-solid fa-phone"></i></span>+9611 123
+                    456</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span><i class="fa-solid fa-location-dot"></i></span
+                    >Lebanon, Beirut</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span><i class="fa-solid fa-envelope"></i></span
+                    >info@travel.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bar">
+            Copyright © 2025 Aseel Fatayerji. All rights reserved
           </div>
         </footer>
       </div>
       <div class="img-container">
         <img
+          class="lens"
           src="https://ik.imagekit.io/sas2seqly/assets/camera-lens.png"
           alt=""
         />
       </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>

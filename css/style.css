@@ -23,7 +23,6 @@
 html,
 body {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -117,10 +116,6 @@ footer {
   z-index: 1;
 }
 
-.zoom {
-  overflow-x: hidden;
-}
-
 .zoom .section {
   background-position: center center;
   background-repeat: no-repeat;
@@ -132,6 +127,7 @@ footer {
 .section.intro {
   background-image: url("../assets/intro.jpg");
 }
+
 .zoom .section-title {
   height: fit-content;
   font-size: 2.5rem;
@@ -451,6 +447,7 @@ footer {
 }
 
 .swiper {
+  overflow: visible;
   padding-block: 5rem;
   width: 100%;
 }

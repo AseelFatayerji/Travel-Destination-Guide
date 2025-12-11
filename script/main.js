@@ -12,7 +12,7 @@ window.addEventListener("load", (e) => {
         scrub: true
       },
     })
-    .to(".img-container img", {
+    .to(".img-container .lens", {
       scale: 2,
       z: 350,
       transformOrigin: "center center",
@@ -21,7 +21,6 @@ window.addEventListener("load", (e) => {
     .to(
       ".section.intro",
       {
-        scale: 1.1,
         transformOrigin: "center center",
         ease: "power1.out",
         duration: 1.5,
@@ -43,7 +42,7 @@ menuBtn.addEventListener("click", (e) => {
 
 navLinks.addEventListener("click", (e) => {
   navLinks.classList.remove("open");
-  hamburger.checked = false;
+  menuBtn.checked = false;
 });
 
 next.addEventListener("click", (e) => {
