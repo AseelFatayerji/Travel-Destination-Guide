@@ -1,6 +1,7 @@
 /*Author: Aseel Fatayerji*/
-const img = document.querySelector(".img-container img");
-img.addEventListener("load", () => {
+
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", (e) => {
   gsap
     .timeline({
       scrollTrigger: {
@@ -8,7 +9,7 @@ img.addEventListener("load", () => {
         start: "top top",
         end: "+=150%",
         pin: true,
-        scrub: true,
+        scrub: true
       },
     })
     .to(".img-container img", {

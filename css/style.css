@@ -106,6 +106,10 @@ footer {
   width: unset;
 }
 
+.wrapper {
+  perspective: 1000px;
+}
+
 .wrapper .zoom {
   position: relative;
   width: 100vw;
