@@ -127,11 +127,11 @@ ScrollReveal().reveal(".choose-list li", {
 ScrollReveal().reveal(".explore-img img", {
   ...scrollRevealOption,
   origin: "right",
-  delay: 1000,
+  delay: 200,
 });
 ScrollReveal().reveal(".explore-content .section-subheader", {
   ...scrollRevealOption,
-  delay: 1000,
+  delay: 500,
 });
 ScrollReveal().reveal(".explore-content .section-header", {
   ...scrollRevealOption,
