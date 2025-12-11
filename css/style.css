@@ -701,6 +701,135 @@ footer {
   text-align: center;
 }
 
+/* From Uiverse.io by JulanDeAlb */
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 2rem;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* From Uiverse.io by vinodjangid07 */
+
+.icon {
+  width: 30px;
+  color: rgb(255, 255, 255);
+  margin-left: 8px;
+  transition: all 0.3s;
+}
+.input {
+  max-width: 170px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  background-color: transparent;
+  color:  var(--white);
+  font-size: 1.2em;
+}
+.input::placeholder {
+  color:  var(--white);
+}
+
+.Subscribe-btn {
+  align-items: center;
+   background-color: var(--main);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 100%;
+  justify-content: center;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s;
+}
+.arrow {
+  color: #ffffff;
+  font-size: 1.5rem;
+  position: absolute;
+  margin-right: 160px;
+  transition: all 0.3s;
+}
+.input-wrapper:active .icon {
+  transform: scale(1.3);
+}
+.Subscribe-btn:hover {
+  color: var(--dark);
+  background-color:  var(--dark);
+}
+.Subscribe-btn:hover .arrow {
+  margin-right: 0;
+  animation: jello-vertical 0.9s both;
+  transform-origin: right;
+}
+
+@keyframes jello-vertical {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.Subscribe-btn:active {
+  transform: scale(0.9);
+}
+
+
 @keyframes fadeEffect {
   from {
     opacity: 0;
