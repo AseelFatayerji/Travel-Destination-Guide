@@ -5,35 +5,40 @@ window.scrollTo(0, 0);
 
 window.addEventListener("load", () => {
   setTimeout(() => window.scrollTo(0, 0), 50);
-  gsap.registerPlugin(ScrollTrigger);
 
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".wrapper",
-      start: "top top",
-      end: "+=150%",
-      pin: true,
-      scrub: true,
-      invalidateOnRefresh: true,
-    },
-  });
+  if (window.innerWidth >= 1024) {
+    gsap.registerPlugin(ScrollTrigger);
 
-  tl.to(".img-container .lens", {
-    scale: 2,
-    z: 350,
-    transformOrigin: "center center",
-    ease: "power1.out",
-  }).to(
-    ".section.intro",
-    {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".wrapper",
+        start: "top top",
+        end: "+=150%",
+        pin: true,
+        scrub: true,
+        invalidateOnRefresh: true,
+      },
+    });
+
+    tl.to(".img-container .lens", {
+      scale: 2,
+      z: 350,
       transformOrigin: "center center",
       ease: "power1.out",
-      duration: 1.5,
-    },
-    "<"
-  );
-  ScrollTrigger.refresh();
+    }).to(
+      ".section.intro",
+      {
+        transformOrigin: "center center",
+        ease: "power1.out",
+        duration: 1.5,
+      },
+      "<"
+    );
+
+    ScrollTrigger.refresh();
+  }
 });
+
 
 const menuBtn = document.getElementById("hamburger-toggle");
 const navLinks = document.getElementById("nav-links");
@@ -117,7 +122,7 @@ const scrollRevealOption = {
   duration: 1000,
   easing: "ease-out",
   reset: false,
-  viewFactor: 0.5,
+  viewFactor: 0.8,
 };
 
 ScrollReveal().reveal(".header-img img", {
