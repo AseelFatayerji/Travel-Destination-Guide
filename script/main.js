@@ -92,12 +92,6 @@ function startCounter(counter) {
   update();
 }
 
-const scrollRevealOPtion = {
-  distance: "50px",
-  duration: 1000,
-  origin: "bottom",
-};
-
 const swiper = new Swiper(".swiper", {
   spaceBetween: 0,
   loop: true,
@@ -109,78 +103,85 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+const scrollRevealOption = {
+  distance: "50px",
+  duration: 1000,
+  easing: "ease-out",
+  reset: false,
+  viewFactor: 1, 
+};
+
+
 ScrollReveal().reveal(".header-img img", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   origin: "right",
   interval: 200,
 });
 ScrollReveal().reveal(".header-content h1", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 1000,
 });
 ScrollReveal().reveal(".header-content .section-description", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 2000,
 });
 ScrollReveal().reveal(".header-content form", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 2500,
 });
 
 ScrollReveal().reveal(".choose-img img", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   origin: "left",
 });
 ScrollReveal().reveal(".about-img", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   origin: "left",
   delay: 1000,
 });
-
 ScrollReveal().reveal(".choose-content .section-subheader", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 1000,
 });
 ScrollReveal().reveal(".choose-content .section-header", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 1000,
 });
 ScrollReveal().reveal(".choose-list li", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 1500,
   interval: 1000,
 });
 
 ScrollReveal().reveal(".explore-img img", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   origin: "right",
   delay: 1000,
 });
-
 ScrollReveal().reveal(".explore-content .section-subheader", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 1000,
 });
 ScrollReveal().reveal(".explore-content .section-header", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 1000,
 });
 ScrollReveal().reveal(".explore-content .section-description", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 1500,
 });
 ScrollReveal().reveal(".explore-content .explore-btn", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 2000,
 });
 
 ScrollReveal().reveal(".explore-grid div", {
+  ...scrollRevealOption,
   distance: "50px",
   duration: 1200,
   delay: 2500,
   easing: "ease-out",
   origin: "bottom",
-
   afterReveal: () => {
     counters.forEach((counter) => {
       if (!counter.classList.contains("started")) {
@@ -191,17 +192,13 @@ ScrollReveal().reveal(".explore-grid div", {
   },
 });
 
-ScrollReveal().reveal(".contact-container .section-header", {
-  ...scrollRevealOPtion,
-});
-
+ScrollReveal().reveal(".contact-container .section-header", scrollRevealOption);
 ScrollReveal().reveal(".contact-container .section-description", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 1000,
 });
-
 ScrollReveal().reveal(".contact-container form", {
-  ...scrollRevealOPtion,
+  ...scrollRevealOption,
   delay: 1500,
 });
 
