@@ -1,32 +1,43 @@
 /*Author: Aseel Fatayerji*/
 
-gsap.registerPlugin(ScrollTrigger);
-window.addEventListener("load", (e) => {
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".wrapper",
-        start: "top top",
-        end: "+=150%",
-        pin: true,
-        scrub: true
-      },
-    })
-    .to(".img-container .lens", {
-      scale: 2,
-      z: 350,
+document.addEventListener("DOMContentLoaded", () => {
+  window.history.scrollRestoration = "manual";
+  window.scrollTo(0, 0);
+});
+
+window.addEventListener("load", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".wrapper",
+      start: "top top",
+      end: "+=150%",
+      pin: true,
+      scrub: true,
+      invalidateOnRefresh: true,
+    },
+  });
+
+  tl.to(".img-container .lens", {
+    scale: 2,
+    z: 350,
+    transformOrigin: "center center",
+    ease: "power1.out",
+  }).to(
+    ".section.intro",
+    {
       transformOrigin: "center center",
       ease: "power1.out",
-    })
-    .to(
-      ".section.intro",
-      {
-        transformOrigin: "center center",
-        ease: "power1.out",
-        duration: 1.5,
-      },
-      "<"
-    );
+      duration: 1.5,
+    },
+    "<"
+  );
+  setTimeout(() => ScrollTrigger.refresh(), 100);
+});
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
 });
 
 const menuBtn = document.getElementById("hamburger-toggle");
@@ -102,11 +113,11 @@ const swiper = new Swiper(".swiper", {
 ScrollReveal().reveal(".header-img img", {
   ...scrollRevealOPtion,
   origin: "right",
-  interval: 500,
+  interval: 200,
 });
 ScrollReveal().reveal(".header-content h1", {
   ...scrollRevealOPtion,
-  delay: 500,
+  delay: 1000,
 });
 ScrollReveal().reveal(".header-content .section-description", {
   ...scrollRevealOPtion,
@@ -124,12 +135,12 @@ ScrollReveal().reveal(".choose-img img", {
 ScrollReveal().reveal(".about-img", {
   ...scrollRevealOPtion,
   origin: "left",
-  delay: 500,
+  delay: 1000,
 });
 
 ScrollReveal().reveal(".choose-content .section-subheader", {
   ...scrollRevealOPtion,
-  delay: 500,
+  delay: 1000,
 });
 ScrollReveal().reveal(".choose-content .section-header", {
   ...scrollRevealOPtion,
@@ -138,18 +149,18 @@ ScrollReveal().reveal(".choose-content .section-header", {
 ScrollReveal().reveal(".choose-list li", {
   ...scrollRevealOPtion,
   delay: 1500,
-  interval: 500,
+  interval: 1000,
 });
 
 ScrollReveal().reveal(".explore-img img", {
   ...scrollRevealOPtion,
   origin: "right",
-  delay: 500,
+  delay: 1000,
 });
 
 ScrollReveal().reveal(".explore-content .section-subheader", {
   ...scrollRevealOPtion,
-  delay: 500,
+  delay: 1000,
 });
 ScrollReveal().reveal(".explore-content .section-header", {
   ...scrollRevealOPtion,
