@@ -1,11 +1,14 @@
 /*Author: Aseel Fatayerji*/
 
-document.addEventListener("DOMContentLoaded", () => {
-  window.history.scrollRestoration = "manual";
-  window.scrollTo(0, 0);
-});
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.scrollTo(0, 0);
 
 window.addEventListener("load", () => {
+  setTimeout(() => window.scrollTo(0, 0), 50);
+
   gsap.registerPlugin(ScrollTrigger);
 
   const tl = gsap.timeline({
@@ -33,10 +36,6 @@ window.addEventListener("load", () => {
     },
     "<"
   );
-  setTimeout(() => ScrollTrigger.refresh(), 100);
-});
-
-window.addEventListener("load", () => {
   ScrollTrigger.refresh();
 });
 
