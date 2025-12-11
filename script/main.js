@@ -102,6 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           },
+          preloadImages: false,
+          lazy: true,
         });
         obs.disconnect();
       }
