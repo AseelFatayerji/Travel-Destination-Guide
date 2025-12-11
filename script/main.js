@@ -1,14 +1,10 @@
 /*Author: Aseel Fatayerji*/
 
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
-}
-
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 window.scrollTo(0, 0);
 
 window.addEventListener("load", () => {
   setTimeout(() => window.scrollTo(0, 0), 50);
-
   gsap.registerPlugin(ScrollTrigger);
 
   const tl = gsap.timeline({
@@ -46,16 +42,16 @@ const prev = document.getElementById("prev");
 const cards = Array.from(document.querySelectorAll(".client-card"));
 const counters = document.querySelectorAll(".counter");
 
-menuBtn.addEventListener("click", (e) => {
+menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("open");
 });
 
-navLinks.addEventListener("click", (e) => {
+navLinks.addEventListener("click", () => {
   navLinks.classList.remove("open");
   menuBtn.checked = false;
 });
 
-next.addEventListener("click", (e) => {
+next.addEventListener("click", () => {
   for (let index = 0; index < cards.length; index++) {
     if (cards[index].classList.contains("active")) {
       const nextIndex = (index + 1) % cards.length;
@@ -65,7 +61,7 @@ next.addEventListener("click", (e) => {
     }
   }
 });
-prev.addEventListener("click", (e) => {
+prev.addEventListener("click", () => {
   for (let index = 0; index < cards.length; index++) {
     if (cards[index].classList.contains("active")) {
       const prevIndex = (index ? index : cards.length) - 1;
@@ -92,15 +88,26 @@ function startCounter(counter) {
   update();
 }
 
-const swiper = new Swiper(".swiper", {
-  spaceBetween: 0,
-  loop: true,
-  breakpoints: {
-    0: { slidesPerView: 1.2 },
-    480: { slidesPerView: 1.5 },
-    640: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  },
+document.addEventListener("DOMContentLoaded", () => {
+  const swiperEl = document.querySelector(".swiper");
+  if (swiperEl) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      if (entries[0].isIntersecting) {
+        new Swiper(".swiper", {
+          spaceBetween: 0,
+          loop: true,
+          breakpoints: {
+            0: { slidesPerView: 1.2 },
+            480: { slidesPerView: 1.5 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          },
+        });
+        obs.disconnect();
+      }
+    });
+    observer.observe(swiperEl);
+  }
 });
 
 const scrollRevealOption = {
@@ -108,9 +115,8 @@ const scrollRevealOption = {
   duration: 1000,
   easing: "ease-out",
   reset: false,
-  viewFactor: 1, 
+  viewFactor: 0.5,
 };
-
 
 ScrollReveal().reveal(".header-img img", {
   ...scrollRevealOption,
@@ -129,7 +135,6 @@ ScrollReveal().reveal(".header-content form", {
   ...scrollRevealOption,
   delay: 2500,
 });
-
 ScrollReveal().reveal(".choose-img img", {
   ...scrollRevealOption,
   origin: "left",
@@ -152,7 +157,6 @@ ScrollReveal().reveal(".choose-list li", {
   delay: 1500,
   interval: 1000,
 });
-
 ScrollReveal().reveal(".explore-img img", {
   ...scrollRevealOption,
   origin: "right",
@@ -174,7 +178,6 @@ ScrollReveal().reveal(".explore-content .explore-btn", {
   ...scrollRevealOption,
   delay: 2000,
 });
-
 ScrollReveal().reveal(".explore-grid div", {
   ...scrollRevealOption,
   distance: "50px",
@@ -191,7 +194,6 @@ ScrollReveal().reveal(".explore-grid div", {
     });
   },
 });
-
 ScrollReveal().reveal(".contact-container .section-header", scrollRevealOption);
 ScrollReveal().reveal(".contact-container .section-description", {
   ...scrollRevealOption,
@@ -208,15 +210,8 @@ function animateValue(obj, start, end, duration) {
     if (!startTimestamp) startTimestamp = timestamp;
     const progress = Math.min((timestamp - startTimestamp) / duration, 1);
     let value = Math.floor(progress * (end - start) + start);
-    if (progress === 1 && end > 14) {
-      obj.innerHTML = value + "+";
-    } else {
-      obj.innerHTML = value;
-    }
-
-    if (progress < 1) {
-      window.requestAnimationFrame(step);
-    }
+    obj.innerHTML = progress === 1 && end > 14 ? value + "+" : value;
+    if (progress < 1) window.requestAnimationFrame(step);
   };
   window.requestAnimationFrame(step);
 }
