@@ -213,41 +213,6 @@ footer {
 
 .header-img {
   display: none;
-  gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 90px;
-  isolation: isolate;
-  position: relative;
-}
-.header-img img {
-  border-radius: 1rem;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  height: 100%;
-  object-fit: cover;
-}
-
-.header-img img:nth-child(1) {
-  grid-area: 1/1/4/3;
-}
-
-.header-img img:nth-child(2) {
-  grid-area: 4/1/7/3;
-}
-
-.header-img img:nth-child(3) {
-  grid-area: 2/3/6/6;
-}
-
-.header-img img:nth-child(4) {
-  aspect-ratio: 1;
-  box-shadow: none;
-  height: 20rem;
-  object-fit: contain;
-  position: absolute;
-  right: 4rem;
-  top: -2rem;
-  transform: rotate(20deg);
-  width: unset;
 }
 
 .choose-container {
@@ -883,31 +848,57 @@ footer {
     width: max-content;
     z-index: 3;
   }
-
-  .header-img img {
+  .header-img {
     display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 90px;
+    isolation: isolate;
+    position: relative;
+  }
+  .header-img img {
     transition: transform 0.3s ease-in-out;
   }
-
-  .header-img img:hover {
-    z-index: 9;
-    transform: scale(1.1);
+  .header-img img {
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    object-fit: cover;
   }
 
   .header-img img:nth-child(1) {
+    grid-area: 1/1/4/3;
     margin-left: 3rem;
     margin-top: -1rem;
     z-index: 1;
   }
 
+  .header-img img:nth-child(2) {
+    grid-area: 4/1/7/3;
+  }
+
   .header-img img:nth-child(3) {
     margin-left: -3rem;
     margin-top: 3rem;
+    grid-area: 2/3/6/6;
   }
 
   .header-img img:nth-child(4) {
+    aspect-ratio: 1;
+    box-shadow: none;
+    height: 20rem;
+    object-fit: contain;
+    position: absolute;
     right: 6rem;
+    top: -2rem;
+    transform: rotate(20deg);
+    width: unset;
     z-index: 10;
+  }
+
+  .header-img img:hover {
+    z-index: 9;
+    transform: scale(1.1);
   }
 
   .choose-container {
@@ -975,6 +966,7 @@ footer {
     width: 100%;
   }
   .section.intro {
+    display: block;
     background-image: url("../assets/intro.jpg");
     overflow: hidden;
   }

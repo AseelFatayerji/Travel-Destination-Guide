@@ -122,7 +122,7 @@ const scrollRevealOption = {
   duration: 1000,
   easing: "ease-out",
   reset: false,
-  viewFactor: 0.8,
+  viewFactor: 0.2,
 };
 
 ScrollReveal().reveal(".header-img img", {
