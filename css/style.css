@@ -967,7 +967,7 @@ footer {
   }
   .section.intro {
     display: block;
-    background-image: url("https://ik.imagekit.io/sas2seqly/assets/intro.jpg/tr:w-1920,h-1080,f-webp/");
+    background-image: url("https://ik.imagekit.io/sas2seqly/assets/intro.jpg/tr:w-1920,h-1080,f-webp,q-70/");
     overflow: hidden;
   }
   .img-container {
